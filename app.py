@@ -505,20 +505,20 @@ st.markdown(
 )
 
 formacao = [
-    ("#667eea", "🔌", "Engenharia de Redes de Telecomunicações",
-     "Pós-Graduação", "Ponto de partida. Base técnica em infraestrutura e redes que abriu caminho para a área de dados."),
-    ("#764ba2", "🗄️", "Administração em Banco de Dados",
-     "Pós-Graduação", "Primeira especialização voltada a dados — fundamentos de modelagem, SQL e gestão de bancos relacionais."),
-    ("#0f3460", "📋", "MBA em Gestão de Projetos",
-     "MBA", "Visão estratégica e liderança de projetos — complementando o perfil técnico com competências de gestão."),
-    ("#059669", "💻", "Tecnologias Digitais Aplicadas à Educação",
-     "Pós-Graduação", "Fundamentação pedagógica para o ensino técnico e uso de tecnologia como ferramenta educacional."),
+    ("#667eea", "🤖", "Ciência de Dados e Inteligência Artificial",
+     "Pós-Graduação · uniSENAI  ✦ Atual", "Especialização em andamento integrando ciência de dados e IA — curso que originou este material."),
     ("#d97706", "📊", "Business Intelligence, Big Data e Analytics — Ciência de Dados",
      "Pós-Graduação · Universidade Pitágoras", "Consolidação em BI e big data, com foco em análise e ciência de dados aplicada ao negócio."),
     ("#dc2626", "🧠", "Ciência de Dados",
      "Pós-Graduação", "Aprofundamento em modelagem estatística, machine learning e pipelines de dados end-to-end."),
-    ("#667eea", "🤖", "Ciência de Dados e Inteligência Artificial",
-     "Pós-Graduação · uniSENAI  ✦ Atual", "Especialização em andamento integrando ciência de dados e IA — curso que originou este material."),
+    ("#0f3460", "📋", "MBA em Gestão de Projetos",
+     "MBA", "Visão estratégica e liderança de projetos — complementando o perfil técnico com competências de gestão."),
+    ("#059669", "💻", "Tecnologias Digitais Aplicadas à Educação",
+     "Pós-Graduação", "Fundamentação pedagógica para o ensino técnico e uso de tecnologia como ferramenta educacional."),
+    ("#764ba2", "🗄️", "Administração em Banco de Dados",
+     "Pós-Graduação", "Base em modelagem, SQL e gestão de bancos relacionais — fundamento técnico para a área de dados."),
+    ("#667eea", "🔌", "Engenharia de Redes de Telecomunicações",
+     "Pós-Graduação", "Ponto de partida da carreira técnica — infraestrutura e redes que antecederam a transição para dados."),
 ]
 
 for cor, icon, titulo, tipo, desc in formacao:
