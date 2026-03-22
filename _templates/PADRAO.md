@@ -1,4 +1,4 @@
-# Padrão Unificado — Machine Learning (UNISENAI)
+# Padrão Unificado — Machine Learning
 
 > **Autor:** Cláudio Ferreira Neves · Especialista em Ciência de Dados e IA
 > Este documento define o padrão único que deve ser seguido em **todos** os artefatos do projeto: notebooks, Streamlit pages e READMEs.
