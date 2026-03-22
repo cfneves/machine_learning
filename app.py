@@ -375,7 +375,7 @@ em4, _, _ = st.columns(3, gap="medium")
 with em4:
     st.markdown("""
     <div class="exp-card">
-        <div class="exp-badge-indigo">📊 Grupo Líder · Belém/PA · Projeto Temporário</div>
+        <div class="exp-badge-indigo">📊 Grupo Líder · Belém/PA</div>
         <div class="exp-role">Analista de Dados Pleno — Controladoria · Grupo Líder</div>
         <div class="exp-desc">
             Projeto de 3 meses no maior grupo varejista do Pará (25+ anos de atuação).
