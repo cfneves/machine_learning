@@ -12,9 +12,9 @@
 
 ## O que é esse projeto?
 
-Antes de treinar qualquer modelo de Machine Learning, é preciso entender os dados. Essa é a proposta central desta aula: percorrer, passo a passo, a **Análise Exploratória de Dados (EDA — Exploratory Data Analysis)**, que é a fase em que o cientista de dados "conversa" com os dados antes de qualquer modelagem.
+Antes de treinar qualquer modelo, é preciso entender os dados. Esta aula percorre a **Análise Exploratória de Dados (EDA)** passo a passo: a fase em que o cientista de dados examina os dados antes de qualquer modelagem.
 
-O projeto usa o **dataset Palmer Penguins** — uma alternativa moderna e mais rica ao clássico Iris — para demonstrar técnicas reais de EDA: inspeção da estrutura, limpeza, análise univariada, multivariada e tratamento de outliers. Tudo isso alinhado com a metodologia **CRISP-DM**, o padrão da indústria para projetos de Ciência de Dados.
+O projeto usa o **dataset Palmer Penguins**, uma alternativa ao clássico Iris com mais variabilidade e contexto biológico, para demonstrar técnicas reais de EDA: inspeção da estrutura, limpeza, análise univariada, multivariada e tratamento de outliers. Tudo alinhado com o **CRISP-DM**, metodologia amplamente usada em projetos de Ciência de Dados.
 
 ---
 
@@ -62,7 +62,7 @@ Os resultados aparecem no terminal e os gráficos são salvos automaticamente na
 
 ## Metodologia CRISP-DM
 
-CRISP-DM (Cross-Industry Standard Process for Data Mining — Processo Padrão Inter-Indústrial para Mineração de Dados) é a metodologia mais adotada em projetos de Ciência de Dados. Ela organiza o trabalho em **6 fases cíclicas**:
+O CRISP-DM (Cross-Industry Standard Process for Data Mining) organiza projetos de Ciência de Dados em **6 fases cíclicas**:
 
 | # | Fase | Descrição |
 |---|------|-----------|
@@ -92,7 +92,7 @@ Nesta aula, as fases **2 (Entendimento dos Dados)** e **3 (Preparação dos Dado
 
 ## O dataset — Palmer Penguins
 
-O dataset **Palmer Penguins** foi coletado na Antártida entre 2007 e 2009 pela pesquisadora **Dr. Kristen Gorman** em parceria com a Estação Palmer. É uma alternativa amplamente usada ao clássico Iris, com mais variabilidade e contexto biológico rico.
+O **Palmer Penguins** foi coletado na Antártida entre 2007 e 2009 pela pesquisadora Dr. Kristen Gorman em parceria com a Estação Palmer. Tem mais variabilidade que o Iris clássico e um contexto biológico mais rico.
 
 ### Variáveis
 

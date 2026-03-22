@@ -12,11 +12,11 @@
 
 ## O que é essa aula?
 
-Todas as aulas anteriores trabalharam com **aprendizado supervisionado**: você tinha os dados e sabia a resposta certa. Os rótulos diziam "isso é diabetes", "esse vinho é da classe 2", "esse tumor é benigno". O modelo aprendia a partir do gabarito.
+Todas as aulas anteriores trabalharam com **aprendizado supervisionado**: você tinha os dados e sabia a resposta certa. O modelo aprendia a partir do gabarito.
 
-Mas e quando você **não tem gabarito**? Quando os dados chegam sem rótulos e você quer descobrir se existe algum padrão, algum agrupamento natural escondido ali? Isso é o **aprendizado não supervisionado**, o tema desta aula.
+Mas e quando não há gabarito? Quando os dados chegam sem rótulos e você quer descobrir se existe algum padrão ou agrupamento natural? Isso é o **aprendizado não supervisionado**.
 
-Você vai aprender dois algoritmos dessa categoria: o **K-Means**, que agrupa dados em clusters (grupos) sem precisar de rótulos, e o **PCA** (Principal Component Analysis — Análise de Componentes Principais), que reduz a dimensionalidade dos dados preservando as informações mais relevantes.
+Esta aula cobre dois algoritmos dessa categoria: o **K-Means**, que agrupa dados em clusters sem precisar de rótulos, e o **PCA** (Principal Component Analysis), que reduz a dimensionalidade preservando o que mais importa nos dados.
 
 Os datasets desta aula são o **Mall Customers** (segmentação de clientes de shopping) e o **Breast Cancer**, usado desta vez de forma não supervisionada.
 
@@ -101,7 +101,7 @@ Quanto menor a inércia, mais compactos são os clusters. O problema é que ela 
 
 **Como escolher o K ideal?**
 
-O **Elbow Method** (Método do Cotovelo) plota a inércia para diferentes valores de K. O K ideal é onde a curva "dobra como um cotovelo" — a partir desse ponto, adicionar mais clusters não reduz a inércia de forma significativa.
+O **Elbow Method** (Método do Cotovelo) plota a inércia para diferentes valores de K. O K ideal fica onde a curva "dobra como um cotovelo": a partir daí, adicionar mais clusters não reduz a inércia de forma significativa.
 
 ### Métricas de avaliação de clusters
 
@@ -115,7 +115,7 @@ Como não temos rótulos, avaliamos a qualidade dos clusters de outras formas:
 
 ### PCA — vendo em menos dimensões sem perder a essência
 
-Imagine que você tem um dataset com 30 colunas. Visualizar isso é impossível para um ser humano. O **PCA** cria novas variáveis, as **componentes principais**, que são combinações lineares das originais, ordenadas por quanto da variância total cada uma explica.
+Com 30 colunas, visualizar os dados diretamente é impossível. O **PCA** cria novas variáveis chamadas **componentes principais**, que são combinações lineares das originais, ordenadas por quanto da variância total cada uma captura.
 
 A primeira componente captura a maior variância possível. A segunda captura a maior variância do que sobrou. E assim por diante.
 
@@ -123,7 +123,7 @@ A primeira componente captura a maior variância possível. A segunda captura a 
 
 $$\text{Variância explicada da componente } k = \frac{\lambda_k}{\sum_i \lambda_i}$$
 
-Onde $\lambda_k$ são os autovalores da matriz de covariância. Não precisa se preocupar com a matemática agora. O que importa é: o PCA encontra as direções no espaço que mais "contam a história" dos dados.
+Onde $\lambda_k$ são os autovalores da matriz de covariância. A matemática pode ficar para depois. O que importa: o PCA encontra as direções no espaço que carregam mais informação dos dados.
 
 ```python
 from sklearn.decomposition import PCA
@@ -151,7 +151,7 @@ O **Mall Customers dataset** contém informações de 200 clientes de um shoppin
 | `Annual Income (k$)` | Renda anual em milhares de dólares |
 | `Spending Score (1-100)` | Índice de gastos atribuído pelo shopping |
 
-O objetivo é segmentar os clientes em grupos com comportamento parecido, sem nenhum rótulo pré-definido. É um caso de uso real: empresas fazem isso o tempo todo para personalizar campanhas de marketing.
+O objetivo é agrupar clientes com comportamento parecido, sem nenhum rótulo. É um caso de uso direto: empresas fazem isso para segmentar campanhas de marketing.
 
 ---
 

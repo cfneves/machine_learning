@@ -143,7 +143,7 @@ Ele introduz o conceito de **array** (vetor ou matriz de números), que é compl
 - Gera números aleatórios com controle de semente (para resultados reproduzíveis — repetíveis)
 - Calcula médias, somas e outras operações estatísticas com uma linha de código
 
-**Por que é a escolha certa:** Todas as grandes bibliotecas de Machine Learning em Python — scikit-learn, TensorFlow, PyTorch — foram construídas **sobre** o NumPy. Aprender NumPy é aprender o idioma base da área. Além disso, operações vetorizadas (aplicadas a todos os elementos de uma vez) chegam a ser **100× mais rápidas** do que um `for` comum.
+**Por que é a escolha certa:** scikit-learn, TensorFlow e PyTorch foram todos construídos sobre o NumPy. Aprender NumPy é aprender o idioma base da área. Operações vetorizadas (aplicadas a todos os elementos de uma vez) chegam a ser 100× mais rápidas do que um `for` comum.
 
 ```python
 import numpy as np
@@ -169,7 +169,7 @@ O nome vem de "MATLAB-like plotting library" (biblioteca de gráficos similar ao
 - Compara visualmente diferentes modelos no mesmo gráfico
 - Salva os gráficos em alta resolução na pasta `outputs/`
 
-**Por que é a escolha certa:** É a fundação. Seaborn e Plotly (bibliotecas mais modernas) são construídos sobre ele. Aprender Matplotlib significa que você vai entender como qualquer gráfico Python funciona por baixo.
+**Por que é a escolha certa:** Seaborn e Plotly são construídos sobre ele. Entender Matplotlib significa entender como qualquer gráfico Python funciona por baixo.
 
 ```python
 import matplotlib.pyplot as plt
@@ -211,7 +211,7 @@ plt.ylabel("Real")       # eixo Y: o valor verdadeiro (gabarito)
 
 ### 🤖 scikit-learn — a biblioteca de Machine Learning
 
-Se você vai trabalhar com Machine Learning em Python, essa biblioteca vai estar em praticamente todos os seus projetos. O scikit-learn (também chamado de sklearn) é **o padrão da indústria** — reúne dezenas de algoritmos de aprendizado, ferramentas de pré-processamento (transformação de dados) e métricas de avaliação, tudo com uma interface consistente e bem documentada.
+Se você vai trabalhar com Machine Learning em Python, o scikit-learn (também chamado de sklearn) vai estar em praticamente todos os seus projetos. Reúne dezenas de algoritmos, ferramentas de pré-processamento e métricas de avaliação com uma interface consistente.
 
 **O que ele faz por nós aqui:**
 - Treina modelos de regressão (`LinearRegression`) e classificação (`LogisticRegression`)
@@ -220,8 +220,7 @@ Se você vai trabalhar com Machine Learning em Python, essa biblioteca vai estar
 - Avalia os modelos: acurácia (accuracy), RMSE, R², matriz de confusão, relatório de classificação
 - Encadeia etapas com `Pipeline` (sequência de transformações + modelo)
 
-**Por que é a escolha certa:** A interface é a mais simples e consistente que existe:
-`fit()` (treinar) → `predict()` (prever) → `score()` (avaliar). Aprenda com um algoritmo e você já sabe usar todos os outros — a lógica é sempre a mesma. É também o mais cobrado em entrevistas e o mais usado em projetos reais.
+**Por que é a escolha certa:** A interface é consistente em todos os algoritmos: `fit()` treina, `predict()` prevê, `score()` avalia. Aprenda com um e você já sabe usar os outros.
 
 ```python
 from sklearn.linear_model import LinearRegression
@@ -242,9 +241,7 @@ r2 = model.score(X_test, y_test) # score = avaliar o desempenho
 
 ### 🌐 Streamlit — de script Python para aplicação web
 
-Aqui está a virada de chave: você passou horas construindo um modelo de Machine Learning, quer mostrar os resultados para alguém — mas essa pessoa não sabe Python e não vai rodar um script. O que fazer?
-
-O Streamlit resolve isso. É um framework (estrutura de desenvolvimento) Python que transforma qualquer script em uma **aplicação web interativa**, sem precisar saber HTML, CSS ou JavaScript. Você escreve em Python puro e o resultado abre no navegador.
+Você construiu um modelo de Machine Learning e quer mostrar os resultados para alguém que não sabe Python. O Streamlit resolve isso. É um framework Python que transforma qualquer script em uma aplicação web, sem precisar escrever HTML, CSS ou JavaScript.
 
 **O que ele faz por nós aqui:**
 - Cria a interface completa de navegação entre as seções
@@ -252,7 +249,7 @@ O Streamlit resolve isso. É um framework (estrutura de desenvolvimento) Python 
 - Exibe os gráficos do Matplotlib diretamente na página
 - Permite publicar (fazer deploy) a aplicação online de graça
 
-**Por que é a escolha certa:** Para cientistas de dados, o Streamlit elimina a barreira entre análise e comunicação. Em vez de enviar um notebook (caderno de código) que poucos sabem abrir, você entrega uma aplicação que qualquer pessoa acessa pelo navegador. É a ferramenta que mais cresce no mercado de dados hoje.
+**Por que é a escolha certa:** Em vez de enviar um notebook que poucos sabem abrir, você entrega uma aplicação que qualquer pessoa acessa pelo navegador.
 
 ```python
 import streamlit as st

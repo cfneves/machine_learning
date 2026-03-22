@@ -12,9 +12,9 @@
 
 ## O que é essa aula?
 
-Sabe quando você quer prever um número — o preço de um imóvel, o custo de um seguro, a temperatura de amanhã? A **regressão** resolve esse tipo de problema. É o ponto de partida clássico de Machine Learning e aparece constantemente no dia a dia de quem trabalha com dados.
+Quando a resposta que você quer prever é um número, o problema é de **regressão**. Preço de imóvel, custo de seguro, temperatura de amanhã. É o ponto de partida de Machine Learning e aparece o tempo todo na prática.
 
-Nesta aula você vai entender como ensinar um modelo a encontrar uma reta (ou uma curva) que se ajusta aos seus dados — e vai descobrir que isso envolve bem mais do que parece. Vamos do método mais simples, que usa uma única variável para prever, até pipelines completos que combinam transformações e modelos em um único fluxo reproduzível.
+Esta aula começa com o método mais simples, usando uma única variável para prever, e vai até pipelines que combinam transformações e modelo em um fluxo reproduzível.
 
 O projeto usa três datasets reais: um dataset artificial de imóveis, o **California Housing** (preços de casas na Califórnia) e o **Insurance** (custo de plano de saúde). Os problemas são reais.
 
@@ -97,7 +97,7 @@ A aplicação interativa deixa você experimentar sem escrever código. Aqui est
 
 ### Regressão Linear Simples
 
-A ideia é encontrar a reta que passa mais perto de todos os pontos ao mesmo tempo. "Mais perto" significa que a soma dos quadrados das distâncias entre os pontos reais e a reta é mínima. Esse método se chama OLS (Ordinary Least Squares, ou Mínimos Quadrados Ordinários):
+O objetivo é encontrar a reta que passa mais perto de todos os pontos ao mesmo tempo. "Mais perto" significa minimizar a soma dos quadrados das distâncias entre os pontos reais e a reta. Esse método se chama OLS (Ordinary Least Squares, ou Mínimos Quadrados Ordinários):
 
 $$\hat{y} = \beta_0 + \beta_1 X$$
 
@@ -145,7 +145,7 @@ Aqui estão as principais classes usadas e o que cada uma faz:
 - `SGDRegressor` — versão do gradiente descendente estocástico (atualiza os pesos uma amostra por vez)
 - `PolynomialFeatures` — cria novas colunas com as potências das features originais (X², X³...)
 - `StandardScaler` — coloca todas as variáveis na mesma escala (média 0, desvio padrão 1). Necessário antes do gradiente descendente
-- `Pipeline` — encadeia transformações e modelo em uma sequência que nunca vaza informação do teste para o treino (evita **data leakage**)
+- `Pipeline` — encadeia transformações e modelo em sequência, garantindo que nenhuma informação do teste vaze para o treino (evita data leakage)
 - `ColumnTransformer` — aplica transformações diferentes para colunas numéricas e categóricas ao mesmo tempo
 
 ```python
