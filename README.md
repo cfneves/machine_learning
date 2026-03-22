@@ -4,6 +4,11 @@
 
 **Cláudio Ferreira Neves  ·  Especialista em Ciência de Dados e IA**
 
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://python.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.36%2B-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4%2B-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
+[![License: CC BY](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey)](https://creativecommons.org/licenses/by/4.0/)
+
 </div>
 
 > Material didático autoral. Reprodução ou uso sem crédito ao autor é considerado plágio.
@@ -26,62 +31,17 @@ A proposta não é decorar algoritmos. É entender o que acontece por baixo de c
 
 ---
 
-## Estrutura do projeto
-
-```
-machine_learning/
-├── app.py                        ← Portal de navegação (página inicial)
-├── nav.py                        ← Componente de abas — navegação entre aulas
-├── README.md                     ← Este arquivo
-├── pages/                        ← Multi-page Streamlit (cada arquivo = uma página)
-│   ├── Aula_01.py
-│   ├── Aula_02.py
-│   ├── Aula_03.py
-│   ├── Aula_04.py
-│   ├── Aula_05.py
-│   ├── Aula_06.py
-│   ├── Aula_07.py
-│   └── Aula_08.py
-├── aula_01/                      ← Introdução ao Machine Learning
-│   ├── app_streamlit.py
-│   ├── requirements.txt
-│   └── README.md
-├── aula_02/                      ← Análise Exploratória de Dados (EDA)
-│   ├── app_streamlit.py
-│   ├── requirements.txt
-│   └── README.md
-├── aula_03/                      ← Regressão Linear e Polinomial
-│   ├── app_streamlit.py
-│   ├── requirements.txt
-│   └── README.md
-├── aula_04/                      ← Regressão Logística e KNN
-│   ├── app_streamlit.py
-│   ├── requirements.txt
-│   └── README.md
-├── aula_05/                      ← Naive Bayes e SVM
-│   ├── app_streamlit.py
-│   ├── requirements.txt
-│   └── README.md
-├── aula_06/                      ← Decision Tree e Random Forest
-│   ├── app_streamlit.py
-│   ├── requirements.txt
-│   └── README.md
-├── aula_07/                      ← K-Means e PCA
-│   ├── app_streamlit.py
-│   ├── requirements.txt
-│   └── README.md
-└── aula_08/                      ← Comparação de Modelos
-    ├── app_streamlit.py
-    └── README.md
-```
-
----
-
 ## Como executar
 
-Um único comando inicia todo o projeto.
-
 ```bash
+# 1. Clone o repositório
+git clone https://github.com/cfneves/machine_learning.git
+cd machine_learning
+
+# 2. Instale as dependências
+pip install -r requirements.txt
+
+# 3. Inicie o portal
 streamlit run app.py
 ```
 
@@ -91,29 +51,50 @@ Abra `http://localhost:8501` no navegador. O portal exibe todas as aulas e você
 
 ## Trilha de aprendizado
 
-| Aula | Tema | Status | Tópicos |
-|------|------|--------|---------|
-| 01 | Introdução ao ML | ✅ Disponível | Regressão, Classificação, Train/Test Split, IRIS |
-| 02 | EDA | ✅ Disponível | CRISP-DM, Univariada, Multivariada, IQR, Penguins |
-| 03 | Regressão Linear e Polinomial | ✅ Disponível | Linear Simples, Múltipla, Polinomial, Pipeline, SGD |
-| 04 | Regressão Logística e KNN | ✅ Disponível | Sigmoid, KNN, GridSearchCV, Cross-Validation |
-| 05 | Naive Bayes e SVM | ✅ Disponível | GaussianNB, SVM, Kernels, GridSearch, Wine |
-| 06 | Decision Tree e Random Forest | ✅ Disponível | Gini, Bagging, Boosting, XGBoost, Feature Importance |
-| 07 | K-Means e PCA | ✅ Disponível | Clusterização, Elbow, Silhouette, PCA, Mall Customers |
-| 08 | Comparação de Modelos | ✅ Disponível | Comparativo cv=10, VotingClassifier, joblib, Alzheimer |
+| Aula | Tema | Tópicos |
+|------|------|---------|
+| 01 | 🤖 Introdução ao ML | Regressão, Classificação, Train/Test Split, IRIS |
+| 02 | 🔍 EDA | CRISP-DM, Univariada, Multivariada, IQR, Penguins |
+| 03 | 📈 Regressão Linear e Polinomial | Linear Simples, Múltipla, Polinomial, Pipeline, SGD |
+| 04 | 🔮 Regressão Logística e KNN | Sigmoid, KNN, GridSearchCV, Cross-Validation |
+| 05 | ⚡ Naive Bayes e SVM | GaussianNB, SVM, Kernels, GridSearch, Wine |
+| 06 | 🌳 Decision Tree e Random Forest | Gini, Bagging, Boosting, XGBoost, Feature Importance |
+| 07 | 🎯 K-Means e PCA | Clusterização, Elbow, Silhouette, PCA, Mall Customers |
+| 08 | 🧬 Comparação de Modelos | Comparativo cv=10, VotingClassifier, joblib, Alzheimer |
+
+---
+
+## Estrutura do projeto
+
+```
+machine_learning/
+├── app.py                        ← Portal de navegação (página inicial)
+├── nav.py                        ← Componente de abas — navegação entre aulas
+├── requirements.txt              ← Dependências do projeto
+├── README.md                     ← Este arquivo
+├── pages/                        ← Multi-page Streamlit (cada arquivo = uma página)
+│   ├── Portal.py
+│   ├── Aula_01.py ... Aula_08.py
+└── aula_NN/                      ← Uma pasta por aula
+    ├── app_streamlit.py          ← Aplicação interativa da aula
+    ├── Aula_NN_Tema_(resolvido).ipynb  ← Notebook completo
+    ├── Aula_NN_Tema_(aluno).ipynb      ← Notebook com exercícios (quando disponível)
+    ├── requirements.txt
+    └── README.md
+```
 
 ---
 
 ## Tecnologias
 
-| Biblioteca | Versão recomendada | Para que serve |
-|------------|--------------------|----------------|
-| `streamlit` | ≥ 1.32 | Interface web interativa |
+| Biblioteca | Versão | Para que serve |
+|------------|--------|----------------|
+| `streamlit` | ≥ 1.36 | Interface web interativa |
 | `pandas` | ≥ 2.0 | Manipulação de dados tabulares |
 | `numpy` | ≥ 1.26 | Operações numéricas vetorizadas |
 | `scikit-learn` | ≥ 1.4 | Algoritmos de Machine Learning |
-| `xgboost` | ≥ 2.0 | Gradient boosting de alta performance (aulas 06 e 08) |
-| `joblib` | ≥ 1.3 | Serialização de modelos treinados (aula 08) |
+| `xgboost` | ≥ 2.0 | Gradient boosting (aulas 06 e 08) |
+| `joblib` | ≥ 1.3 | Serialização de modelos (aula 08) |
 | `matplotlib` | ≥ 3.8 | Visualizações base |
 | `seaborn` | ≥ 0.13 | Visualizações estatísticas |
 
