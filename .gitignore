@@ -48,6 +48,10 @@ _templates/outputs/
 4.objetivo_curso.txt
 5.enviar_para_o_git.txt
 
+# Scripts de geração/inspeção (uso interno — não são conteúdo do curso)
+create_aluno_*.py
+inspect_nb.py
+
 
 # ── IDEs ──────────────────────────────────────────────────────────────────────
 .vscode/settings.json
