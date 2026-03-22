@@ -525,7 +525,7 @@ st.markdown("""
             Baixe, abra no Jupyter ou VS Code e complete os exercícios marcados com ✍️.
         </p>
         <p style="margin: 0.6rem 0 0; font-size: 0.82rem; opacity: 0.75;">
-            ✅ Aula 01 disponível &nbsp;·&nbsp; 🔒 Aulas 02–08 em breve
+            ✅ Aulas 01–04 disponíveis &nbsp;·&nbsp; 🔒 Aulas 05–08 em breve
         </p>
     </div>
 </div>

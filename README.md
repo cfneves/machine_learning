@@ -68,10 +68,13 @@ Abra `http://localhost:8501` no navegador. O portal exibe todas as aulas e você
 
 O portal tem uma seção dedicada ao aluno acessível pelo botão "Área do Aluno" no Portal ou diretamente em `pages/Aluno.py`. Lá você encontra notebooks com exercícios em branco para praticar enquanto acompanha as aulas — células marcadas com ✍️ para preencher, com dicas no código.
 
-| Aula | Notebook do aluno | Status |
-|------|-------------------|--------|
-| 01 | `Aula_01_Introducao_ao_ML_(aluno).ipynb` | ✅ Disponível |
-| 02–08 | — | 🔒 Em breve |
+| Aula | Notebook do aluno | Exercícios | Status |
+|------|-------------------|-----------|--------|
+| 01 | `Aula_01_Introducao_ao_ML_(aluno).ipynb` | 7 | ✅ Disponível |
+| 02 | `Aula_02_Analise_Exploratoria_(aluno).ipynb` | 6 | ✅ Disponível |
+| 03 | `Aula_03_Regressao_Linear_Polinomial_(aluno).ipynb` | 7 | ✅ Disponível |
+| 04 | `Aula_04_Regressao_Logistica_KNN_(aluno).ipynb` | 6 | ✅ Disponível |
+| 05–08 | — | — | 🔒 Em breve |
 
 ---
 
