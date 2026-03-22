@@ -51,6 +51,9 @@ _templates/outputs/
 # Scripts de geração/inspeção (uso interno — não são conteúdo do curso)
 create_aluno_*.py
 inspect_nb.py
+check_headers.py
+fix_disciplina.py
+remove_disciplina_line.py
 
 
 # ── IDEs ──────────────────────────────────────────────────────────────────────
