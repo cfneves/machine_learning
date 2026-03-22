@@ -6,7 +6,6 @@ Aplicação Streamlit interativa — material didático para iniciantes
 
 Autor       : Cláudio Ferreira Neves
 Cargo atual : Analista de BI — Save Co. | Jaraguá do Sul/SC
-Docência    : Especialista de Ensino II — Análise de Dados | SENAI/SC
 Certificação: DATA ANALYST CERTIFIED PROFESSIONAL © (DACP)
 =============================================================================
 """
@@ -1869,6 +1868,29 @@ plt.ylabel("Real (gabarito)")
 plt.title("Matriz de Confusão — IRIS")
 plt.show()
 """)
+
+
+# ============================================================================
+# MATERIAL DO ALUNO — DOWNLOAD DO NOTEBOOK
+# ============================================================================
+
+st.markdown("---")
+st.markdown("### 📓 Material do Aluno")
+
+_notebook_path = os.path.join(os.path.dirname(__file__), "Aula_01_Introducao_ao_ML_(aluno).ipynb")
+if os.path.exists(_notebook_path):
+    with open(_notebook_path, "rb") as _f:
+        st.download_button(
+            label="⬇️ Baixar notebook do aluno — Aula 01 (versão para praticar)",
+            data=_f,
+            file_name="Aula_01_Introducao_ao_ML_(aluno).ipynb",
+            mime="application/json",
+            use_container_width=True,
+        )
+    st.info(
+        "💡 Este notebook contém os mesmos conteúdos da aula com células de exercício em branco. "
+        "Abra no Jupyter e complete os exercícios marcados com ✍️."
+    )
 
 
 # ============================================================================

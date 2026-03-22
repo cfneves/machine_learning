@@ -14,6 +14,7 @@ Como executar:
 =============================================================================
 """
 
+import os
 import streamlit as st
 
 # ---------------------------------------------------------------------------
@@ -503,6 +504,50 @@ with col_b:
         <code>pip install streamlit numpy pandas matplotlib seaborn scikit-learn xgboost joblib</code>
     </div>
     """, unsafe_allow_html=True)
+
+
+# ============================================================================
+# MATERIAIS DO ALUNO — DOWNLOAD
+# ============================================================================
+
+st.markdown("## 📓 Materiais do Aluno")
+st.markdown(
+    "<p style='color:#555; margin-top:-0.5rem; margin-bottom:1.5rem;'>"
+    "Notebooks com exercícios em branco para você praticar enquanto acompanha as aulas.</p>",
+    unsafe_allow_html=True,
+)
+
+_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+_notebooks_aluno = [
+    ("Aula 01 — Introdução ao ML", "aula_01/Aula_01_Introducao_ao_ML_(aluno).ipynb"),
+]
+
+_col_nb1, _col_nb2, _col_nb3, _col_nb4 = st.columns(4, gap="medium")
+_nb_cols = [_col_nb1, _col_nb2, _col_nb3, _col_nb4]
+
+for idx, (label, rel_path) in enumerate(_notebooks_aluno):
+    nb_file = os.path.join(_root, rel_path)
+    with _nb_cols[idx % 4]:
+        if os.path.exists(nb_file):
+            with open(nb_file, "rb") as _f:
+                st.download_button(
+                    label=f"⬇️ {label}",
+                    data=_f,
+                    file_name=os.path.basename(rel_path),
+                    mime="application/json",
+                    use_container_width=True,
+                    key=f"dl_nb_{idx}",
+                )
+        else:
+            st.markdown(
+                f"<div style='background:#f9fafb; border:1px dashed #ccc; border-radius:10px; "
+                f"padding:1rem; text-align:center; color:#aaa; font-size:0.85rem;'>"
+                f"🔒 {label}<br><small>Em breve</small></div>",
+                unsafe_allow_html=True,
+            )
+
+st.info("💡 Abra o notebook baixado no Jupyter Notebook ou VS Code e complete os exercícios marcados com ✍️.")
+st.markdown("---")
 
 
 # ============================================================================

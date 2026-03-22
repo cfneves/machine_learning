@@ -42,11 +42,11 @@ _templates/outputs/
 
 
 # ── Arquivos de trabalho interno (não fazem parte do curso) ──────────────────
-apresentacao.txt
-Contexto.txt
-enviar_para_o_git.txt
-execute.txt
-objetivo_curso.txt
+1.apresentacao.txt
+2.Contexto.txt
+3.execute.txt
+4.objetivo_curso.txt
+5.enviar_para_o_git.txt
 
 
 # ── IDEs ──────────────────────────────────────────────────────────────────────
