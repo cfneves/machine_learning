@@ -370,6 +370,30 @@ with em3:
     </div>
     """, unsafe_allow_html=True)
 
+em4, _, _ = st.columns(3, gap="medium")
+
+with em4:
+    st.markdown("""
+    <div class="exp-card">
+        <div class="exp-badge-indigo">📊 Grupo Líder · Belém/PA · Projeto Temporário</div>
+        <div class="exp-role">Analista de Dados Pleno — Controladoria · Grupo Líder</div>
+        <div class="exp-desc">
+            Projeto de 3 meses no maior grupo varejista do Pará (25+ anos de atuação).
+            Implementou análise de dados no Protheus (TOTVS) — área que não tinha visibilidade
+            analítica antes. Entregou dashboards financeiros, cruzamento de dados contábeis com
+            SQL e Python, e automação do fechamento mensal na Controladoria.
+        </div>
+        <div>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">TOTVS Protheus</span>
+            <span class="skill-tag">Controladoria</span>
+            <span class="skill-tag">Auditoria de Dados</span>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
 st.markdown("<div style='margin-bottom:1.2rem;'></div>", unsafe_allow_html=True)
 
 # ── Docência ─────────────────────────────────────────────────────────────────
