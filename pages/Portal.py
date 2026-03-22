@@ -178,7 +178,7 @@ with st.sidebar:
     """, unsafe_allow_html=True)
 
     st.markdown("---")
-    if st.button("📓 Área do Aluno", use_container_width=True, key="sidebar_btn_aluno"):
+    if st.button("📓 Caderno de Exercícios", use_container_width=True, key="sidebar_btn_aluno"):
         st.switch_page(PAGE_ALUNO)
     st.page_link("app.py", label="← Voltar à Apresentação", use_container_width=True)
 
@@ -510,7 +510,7 @@ with col_b:
 
 
 # ============================================================================
-# ÁREA DO ALUNO — CARD DE ACESSO
+# CADERNO DE EXERCÍCIOS — CARD DE ACESSO
 # ============================================================================
 
 st.markdown("""
@@ -519,7 +519,7 @@ st.markdown("""
             display: flex; align-items: center; gap: 2rem; margin-bottom: 1rem;">
     <div style="font-size: 3rem; flex-shrink: 0;">📓</div>
     <div style="flex: 1;">
-        <h2 style="margin: 0 0 0.4rem; font-size: 1.6rem; font-weight: 800;">Área do Aluno</h2>
+        <h2 style="margin: 0 0 0.4rem; font-size: 1.6rem; font-weight: 800;">Caderno de Exercícios</h2>
         <p style="margin: 0; opacity: 0.9; font-size: 0.95rem; max-width: 560px;">
             Notebooks com exercícios para praticar enquanto acompanha as aulas.
             Baixe, abra no Jupyter ou VS Code e complete os exercícios marcados com ✍️.
@@ -531,7 +531,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-if st.button("📓 Ir para a Área do Aluno →", use_container_width=False, type="primary", key="btn_aluno_main"):
+if st.button("📓 Ir para o Caderno de Exercícios →", use_container_width=False, type="primary", key="btn_aluno_main"):
     st.switch_page(PAGE_ALUNO)
 
 st.markdown("---")

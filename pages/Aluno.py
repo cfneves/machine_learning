@@ -1,7 +1,7 @@
 """
 =============================================================================
-pages/Aluno.py — Área do Aluno
-Material para prática: notebooks com exercícios em branco por aula
+pages/Aluno.py — Caderno de Exercícios
+Notebooks com exercícios em branco para praticar por aula
 
 Autor       : Cláudio Ferreira Neves
 Cargo atual : Analista de BI — Save Co. | Jaraguá do Sul/SC
@@ -23,7 +23,7 @@ PAGE_PORTAL = "pages/Portal.py"
 _ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 st.set_page_config(
-    page_title="Área do Aluno — Machine Learning",
+    page_title="Caderno de Exercícios — Machine Learning",
     page_icon="📓",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -92,7 +92,7 @@ st.markdown("<br>", unsafe_allow_html=True)
 # ---------------------------------------------------------------------------
 st.markdown("""
 <div class="hero-aluno">
-    <h1>📓 Área do Aluno</h1>
+    <h1>📓 Caderno de Exercícios</h1>
     <p>Notebooks com exercícios para você praticar enquanto acompanha as aulas.
        Baixe, abra no Jupyter ou VS Code e complete os exercícios marcados com ✍️.</p>
 </div>
@@ -247,7 +247,7 @@ if st.button("← Voltar ao Portal", key="btn_back_bottom"):
 st.markdown("""
 <div class="footer-aluno">
     <p style="margin:0; font-size:0.9rem; font-weight:600; opacity:0.9;">
-        📓 Área do Aluno — Machine Learning
+        📓 Caderno de Exercícios — Machine Learning
     </p>
     <p style="margin:0.3rem 0 0; font-size:0.8rem; opacity:0.65;">
         Cláudio Ferreira Neves &nbsp;·&nbsp; Especialista em Ciência de Dados e IA &nbsp;·&nbsp; SENAI/SC

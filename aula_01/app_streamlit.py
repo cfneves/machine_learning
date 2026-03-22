@@ -1875,7 +1875,7 @@ plt.show()
 # ============================================================================
 
 st.markdown("---")
-st.markdown("### 📓 Material do Aluno")
+st.markdown("### 📓 Caderno de Exercícios")
 
 _notebook_path = os.path.join(os.path.dirname(__file__), "Aula_01_Introducao_ao_ML_(aluno).ipynb")
 if os.path.exists(_notebook_path):
