@@ -12,9 +12,9 @@
 
 ## O que é essa aula?
 
-Até aqui você aprendeu a prever números — preços, custos, temperaturas. Mas e quando a resposta não é um número, e sim uma categoria? "Esse paciente tem diabetes ou não?" "Esse passageiro sobreviveu ao Titanic?" "Qual espécie é esse pinguim?" Esse tipo de problema se chama **classificação**, e é onde a maioria das aplicações práticas de Machine Learning vive.
+Até aqui você aprendeu a prever números. Mas e quando a resposta é uma categoria? "Esse paciente tem diabetes ou não?" "Esse passageiro sobreviveu?" "Qual espécie é esse pinguim?" Esse tipo de problema se chama **classificação**.
 
-Nesta aula você vai aprender dois algoritmos de classificação bem diferentes entre si: a **Regressão Logística** (que, apesar do nome, classifica — não regride) e o **KNN** (K-Nearest Neighbors, K Vizinhos Mais Próximos). Entender as duas abordagens dá uma base boa para encarar qualquer problema de classificação.
+Esta aula cobre dois algoritmos bem diferentes: a **Regressão Logística** (que, apesar do nome, classifica) e o **KNN** (K-Nearest Neighbors, K Vizinhos Mais Próximos). São abordagens opostas, e entender as duas ajuda a tomar decisões melhores na prática.
 
 Os datasets desta aula são reais: **Diabetes** (diagnóstico médico), **Penguins** (classificação de espécies) e **Titanic** (sobrevivência a bordo).
 
@@ -90,7 +90,7 @@ Apesar do nome "regressão", ela é usada para classificar. O truque é usar a *
 
 $$P(y=1 \mid X) = \sigma(z) = \frac{1}{1 + e^{-z}} \quad \text{onde} \quad z = \beta_0 + \boldsymbol{\beta}^T X$$
 
-Se a probabilidade for maior que 0,5 → classe 1. Menor que 0,5 → classe 0. Simples assim.
+Se a probabilidade for maior que 0,5, o modelo classifica como classe 1. Abaixo disso, classe 0.
 
 Para classificação com mais de duas classes (multi-classe), o scikit-learn usa automaticamente a estratégia **OvR (One-vs-Rest, Um contra o Resto)**: treina um classificador binário para cada classe e escolhe a que tiver maior probabilidade.
 
@@ -110,9 +110,9 @@ Quanto à escolha de K: valores muito pequenos fazem o modelo memorizar os dados
 
 ## Validação Cruzada Estratificada
 
-Avaliar um modelo nos mesmos dados em que ele treinou produz resultados otimistas. A **validação cruzada (cross-validation)** divide os dados em K grupos, treina em K-1 e testa no restante, rotacionando até todos os grupos terem sido usados como teste.
+Avaliar um modelo nos mesmos dados em que ele treinou produz resultados otimistas. A **validação cruzada** divide os dados em K grupos, treina em K-1 e testa no restante, rotacionando até todos os grupos terem passado pelo teste.
 
-A versão **estratificada** garante que a proporção de cada classe seja mantida em cada fold — essencial quando os dados são desbalanceados (por exemplo, muito mais "sem diabetes" do que "com diabetes").
+A versão **estratificada** mantém a proporção de cada classe em cada fold, o que é importante quando os dados são desbalanceados (muito mais "sem diabetes" do que "com diabetes", por exemplo).
 
 ```python
 from sklearn.model_selection import cross_validate, StratifiedKFold

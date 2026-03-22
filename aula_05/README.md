@@ -12,11 +12,11 @@
 
 ## O que é essa aula?
 
-Na aula anterior você aprendeu a classificar com Regressão Logística e KNN. Agora vamos explorar duas abordagens completamente diferentes, e cada uma vai te mostrar um ângulo novo sobre como um algoritmo pode "pensar" para separar classes.
+Esta aula apresenta dois algoritmos com lógicas bem distintas.
 
-O **Naive Bayes** pensa em termos de probabilidade: dado o que eu sei sobre esse ponto, qual é a chance de ele pertencer a cada classe? Já o **SVM** (Support Vector Machine, ou Máquina de Vetores de Suporte) pensa geometricamente: onde posso desenhar a fronteira que separa as classes com a maior margem possível?
+O **Naive Bayes** raciocina por probabilidade: dado o que sei sobre esse ponto, qual a chance de ele pertencer a cada classe? O **SVM** (Support Vector Machine) raciocina geometricamente: onde posso traçar a fronteira que separa as classes com a maior margem possível?
 
-São duas filosofias opostas, e as duas funcionam. Aprender quando usar cada uma é o que separa um cientista de dados iniciante de um experiente.
+As duas abordagens funcionam. Saber quando usar cada uma é parte do trabalho.
 
 O dataset principal desta aula é o **Wine** (classificação de vinhos por características químicas), com demonstrações extras em dados artificiais para deixar os conceitos visuais e intuitivos.
 
@@ -90,11 +90,11 @@ A ideia vem do **Teorema de Bayes**: a probabilidade de uma hipótese dado uma e
 
 $$P(C_k \mid X) = \frac{P(X \mid C_k) \cdot P(C_k)}{P(X)}$$
 
-O "Naive" (ingênuo) do nome vem da suposição simplificadora de que todas as features são **independentes entre si** dado a classe. Isso raramente é verdade na prática, mas o algoritmo ainda assim tende a funcionar bem.
+O "Naive" do nome vem da suposição de que todas as features são **independentes entre si** dada a classe. Isso raramente é verdade na prática, mas o algoritmo costuma funcionar bem mesmo assim.
 
-O **GaussianNB** (Naive Bayes Gaussiano) assume que cada feature segue uma distribuição normal dentro de cada classe. Ele estima a média e o desvio padrão de cada feature para cada classe e usa isso para calcular as probabilidades.
+O **GaussianNB** assume que cada feature segue uma distribuição normal dentro de cada classe. Ele estima a média e o desvio padrão de cada feature por classe e usa isso para calcular as probabilidades.
 
-Use o Naive Bayes quando tiver muitas features, trabalhar com texto, ou quando a velocidade de treino importar mais que a precisão máxima.
+Funciona bem quando há muitas features, quando os dados são texto, ou quando a velocidade de treino importa mais do que extrair o máximo de performance.
 
 ### SVM — pensando geometricamente
 
@@ -173,7 +173,7 @@ O **Wine dataset** contém 178 amostras de vinhos italianos de três produtores 
 | `proline` | Prolina |
 | ... | 13 features no total |
 
-É um dataset clássico, balanceado e desafiador o suficiente para mostrar diferenças reais entre os algoritmos.
+É balanceado e tem variância suficiente para que diferenças entre algoritmos apareçam nos resultados.
 
 ---
 

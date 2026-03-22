@@ -10,21 +10,19 @@
 
 ---
 
-A inteligência artificial deixou de ser um diferencial para se tornar uma necessidade operacional. Empresas que ainda tomam decisões baseadas exclusivamente em intuição ou em relatórios históricos estão perdendo velocidade para concorrentes que já usam modelos preditivos no dia a dia — seja para antecipar demanda, detectar fraudes, personalizar experiências ou otimizar processos. Não é exagero dizer que a capacidade de extrair inteligência dos dados é hoje um dos ativos mais valiosos que uma organização pode desenvolver.
+Machine Learning é o conjunto de técnicas que permite que sistemas aprendam padrões a partir de dados históricos e façam previsões sobre situações novas, sem que cada regra seja programada manualmente. Um modelo de crédito aprende com históricos de pagamento. Um filtro de spam aprende com e-mails rotulados. Um sistema de diagnóstico aprende com exames anteriores. A lógica é sempre a mesma: dados de entrada, padrão identificado, previsão na saída.
 
-Mas dados brutos, por si só, não valem quase nada. O que transforma dado em vantagem competitiva é a qualidade com que ele foi coletado, organizado e interpretado. Dados inconsistentes, incompletos ou mal estruturados geram modelos que erram com confiança — e isso é pior do que não ter modelo nenhum. Por isso, antes de qualquer algoritmo entrar em cena, é preciso entender profundamente o que os dados estão dizendo: quais variáveis importam, onde estão os ruídos, quais padrões são reais e quais são artefatos do processo de coleta.
+O que separa um projeto de ML que funciona de um que não funciona raramente é a escolha do algoritmo. Quase sempre é a qualidade dos dados. Dados inconsistentes ou mal estruturados geram modelos que erram com confiança, o que é pior do que não ter modelo nenhum. Antes de rodar qualquer algoritmo, é preciso entender o que os dados estão dizendo: quais variáveis importam, onde estão os ruídos, o que é sinal e o que é artefato da coleta.
 
-É nesse contexto que o profissional de dados se torna estratégico. Não apenas pela capacidade técnica de rodar um modelo, mas pela habilidade de fazer as perguntas certas — e de traduzir os resultados para quem toma decisão. O cientista de dados que sabe apenas codar é um executor. O que entende o negócio, questiona os dados e comunica os achados com clareza é o que realmente move o ponteiro.
-
-Machine Learning é o conjunto de técnicas que permite que sistemas aprendam padrões a partir de dados históricos e façam previsões ou classificações sobre situações novas — sem que cada regra precise ser programada manualmente. Da detecção de anomalias em tempo real à recomendação de produtos, da análise de risco de crédito ao diagnóstico médico assistido, as aplicações são vastas. Dominar esses fundamentos não é opcional para quem trabalha com dados: é o que separa análises descritivas do passado de decisões inteligentes sobre o futuro.
+Saber treinar um modelo é a parte mais fácil. O que realmente diferencia o trabalho de um cientista de dados é saber fazer as perguntas certas antes de começar, e saber explicar os resultados para quem vai tomar a decisão.
 
 ---
 
 ## Sobre este material
 
-Este é um material didático autoral desenvolvido por **Cláudio Ferreira Neves**, com foco no aprendizado prático de Machine Learning do zero. Cada aula combina teoria direta com exemplos reais, código comentado e aplicações interativas construídas em Streamlit — acessíveis pelo navegador, sem precisar rodar nada no terminal.
+Este é um material didático de **Cláudio Ferreira Neves**, desenvolvido para quem está começando do zero em Machine Learning. Cada aula tem teoria, código comentado e uma aplicação Streamlit que roda no navegador, sem precisar abrir terminal.
 
-A proposta não é decorar algoritmos. É entender o que acontece por baixo de cada técnica, por que ela existe, quando usá-la e como interpretar os resultados no contexto de um problema real.
+A proposta não é decorar algoritmos. É entender o que acontece por baixo de cada técnica, por que ela existe, quando usá-la e como interpretar os resultados diante de um problema real.
 
 ---
 

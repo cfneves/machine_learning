@@ -12,11 +12,11 @@
 
 ## O que é essa aula?
 
-Se você já tomou uma decisão seguindo uma sequência de perguntas — "o paciente tem mais de 50 anos? Sim → faz o exame. Não → observa primeiro" — você já pensou como uma **árvore de decisão**. A lógica do algoritmo é essa mesma: dividir os dados em grupos cada vez menores até chegar a uma conclusão.
+Se você já tomou uma decisão seguindo uma sequência de perguntas, "o paciente tem mais de 50 anos? Sim, faz o exame. Não, observa primeiro", você já pensou como uma **árvore de decisão**. O algoritmo divide os dados em grupos menores até chegar a uma conclusão.
 
-Árvores individuais têm um problema sério, porém: tendem a memorizar os dados de treino em vez de aprender padrões gerais. Criar **centenas de árvores** e deixar que votem juntas resolve isso. Esse é o princípio da **Random Forest** (Floresta Aleatória). Se quiser ir além, os algoritmos de **boosting** como o **XGBoost** treinam árvores sequencialmente, cada uma corrigindo os erros da anterior.
+O problema das árvores individuais é que tendem a memorizar o treino em vez de aprender padrões gerais. Criar centenas delas e deixar que votem juntas resolve boa parte disso. Esse é o princípio da **Random Forest**. O **XGBoost** vai além: treina as árvores em sequência, cada uma focando nos erros da anterior.
 
-Esta aula usa o dataset **Breast Cancer** (diagnóstico de câncer de mama), um problema real onde a precisão do modelo pode ter consequências diretas.
+Esta aula usa o dataset **Breast Cancer**, diagnóstico de câncer de mama, onde a precisão do modelo tem consequências reais.
 
 ---
 
@@ -98,9 +98,9 @@ $$\text{Gini}(p) = 1 - \sum_{k} p_k^2$$
 
 $$H(p) = -\sum_{k} p_k \log_2(p_k)$$
 
-Na prática, as duas métricas levam a resultados muito parecidos. Gini é ligeiramente mais rápida computacionalmente.
+Na prática, as duas métricas levam a resultados parecidos. Gini é ligeiramente mais rápida.
 
-Sem limite de profundidade, a árvore continua dividindo até ter um nó por amostra: o modelo decora tudo e generaliza muito mal. O parâmetro `max_depth` é a principal ferramenta de controle.
+Sem limite de profundidade, a árvore divide até ter um nó por amostra: decora tudo e não generaliza nada. O `max_depth` é o principal parâmetro de controle.
 
 ### Random Forest — força no coletivo
 
@@ -115,7 +115,7 @@ O resultado final é a **votação** de todas as árvores. Erros individuais se 
 
 O Random Forest treina todas as árvores em paralelo e de forma independente. O **XGBoost** segue outra lógica, o **Boosting**: treina uma árvore, analisa onde errou, e a próxima árvore foca especificamente nesses erros. Iteração após iteração, o modelo vai ficando mais preciso.
 
-É muito usado em competições de Machine Learning, especialmente em dados tabulares.
+Domina competições de ML em dados tabulares.
 
 ### Feature Importance — quais variáveis importam?
 

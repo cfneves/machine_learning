@@ -12,11 +12,9 @@
 
 ## O que é essa aula?
 
-Esta é a aula final do curso, onde tudo se conecta.
+Nas sete aulas anteriores você aprendeu algoritmos diferentes e avaliou cada um de forma isolada. Na prática, a pergunta não é "esse modelo funciona?". É **"qual funciona melhor para este problema?"**
 
-Nas sete aulas anteriores você aprendeu algoritmos diferentes: Regressão Logística, KNN, Naive Bayes, SVM, Decision Tree, Random Forest e XGBoost. Em cada aula, você avaliou um modelo de forma isolada. Mas na prática, a pergunta real nunca é "esse modelo funciona?". É **"qual modelo funciona melhor para *este* problema?"**
-
-Nesta aula você vai colocar todos os modelos para competir no mesmo dataset, em condições iguais, e tomar uma decisão baseada em evidências. Vai aprender também a **combinar os melhores modelos em um Ensemble** (conjunto), que muitas vezes supera qualquer modelo individual. E vai aprender a **salvar o modelo treinado em disco** para usar depois, o primeiro passo para um deploy real.
+Nesta aula você coloca todos os modelos para competir no mesmo dataset, em condições iguais, e decide com base nos resultados. Aprende também a combinar os melhores em um **Ensemble**, que costuma superar qualquer modelo individual. E aprende a salvar o modelo treinado em disco — primeiro passo para um deploy real.
 
 O dataset desta aula é o **Alzheimer's Disease** (diagnóstico da doença de Alzheimer), um problema médico real com mais de 35 features e um desafio genuíno de generalização.
 
@@ -101,10 +99,10 @@ for nome, modelo in modelos.items():
 
 Um **VotingClassifier** combina múltiplos modelos e decide pelo voto. Há duas formas de fazer isso:
 
-- Hard Voting: cada modelo vota em uma classe e a classe com mais votos ganha.
-- Soft Voting: cada modelo calcula a probabilidade de cada classe, as probabilidades são somadas e a classe com a maior soma ganha. Em geral produz resultados melhores, mas requer que todos os modelos tenham o método `predict_proba`.
+- **Hard Voting:** cada modelo vota em uma classe e a mais votada vence.
+- **Soft Voting:** cada modelo calcula a probabilidade de cada classe, as probabilidades são somadas e a maior soma vence. Geralmente produz resultados melhores, mas exige que todos os modelos tenham `predict_proba`.
 
-A ideia por trás do Ensemble é que modelos diferentes erram em pontos diferentes. Quando você combina modelos com erros decorrelacionados, os erros individuais se cancelam e o conjunto fica mais forte do que qualquer membro isolado.
+A ideia do Ensemble é que modelos diferentes erram em pontos diferentes. Quando os erros são decorrelacionados, eles tendem a se cancelar e o conjunto fica mais robusto do que qualquer modelo individual.
 
 ```python
 from sklearn.ensemble import VotingClassifier
@@ -155,7 +153,7 @@ O dataset de Alzheimer contém dados clínicos e demográficos de pacientes, com
 | Alvo | Diagnóstico de Alzheimer (Positivo / Negativo) |
 | Desafio | Features correlacionadas, valores ausentes, desbalanceamento |
 
-É propositalmente mais complexo que os datasets das aulas anteriores, porque o objetivo desta aula final é simular um problema real, com toda a dificuldade que vem junto.
+É mais complexo do que os datasets das aulas anteriores de propósito: o objetivo é simular um problema real, com as dificuldades que isso implica.
 
 ---
 
@@ -202,7 +200,7 @@ Toda vez que a aplicação é executada, os gráficos são exportados para `outp
 
 ## Chegou até aqui
 
-Se você acompanhou todas as 8 aulas, passou por toda a trilha de Machine Learning que este curso propõe: exploração e preparação de dados, algoritmos supervisionados e não supervisionados, avaliação honesta com validação cruzada e persistência de modelos com joblib. Agora o próximo passo é praticar com dados próprios.
+Se você chegou até aqui, passou por toda a trilha: exploração de dados, algoritmos supervisionados e não supervisionados, avaliação com validação cruzada e persistência de modelos com joblib. O próximo passo é praticar com dados que você mesmo escolheu.
 
 ---
 
