@@ -48,6 +48,9 @@ _templates/outputs/
 4.objetivo_curso.txt
 5.enviar_para_o_git.txt
 
+# Arquivo de contexto para o assistente IA (uso interno)
+LEIA_ANTES_DE_COMECAR.txt
+
 # Scripts de geração/inspeção (uso interno — não são conteúdo do curso)
 create_aluno_*.py
 inspect_nb.py
