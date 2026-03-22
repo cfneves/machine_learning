@@ -29,6 +29,7 @@ PAGE_AULA_06 = "pages/Aula_06.py"
 PAGE_AULA_07 = "pages/Aula_07.py"
 PAGE_AULA_08 = "pages/Aula_08.py"
 PAGE_LANDING  = "app.py"
+PAGE_ALUNO    = "pages/Aluno.py"
 
 # ============================================================================
 # CONFIGURAÇÃO DA PÁGINA
@@ -177,6 +178,8 @@ with st.sidebar:
     """, unsafe_allow_html=True)
 
     st.markdown("---")
+    if st.button("📓 Área do Aluno", use_container_width=True, key="sidebar_btn_aluno"):
+        st.switch_page(PAGE_ALUNO)
     st.page_link("app.py", label="← Voltar à Apresentação", use_container_width=True)
 
 
@@ -507,46 +510,30 @@ with col_b:
 
 
 # ============================================================================
-# MATERIAIS DO ALUNO — DOWNLOAD
+# ÁREA DO ALUNO — CARD DE ACESSO
 # ============================================================================
 
-st.markdown("## 📓 Materiais do Aluno")
-st.markdown(
-    "<p style='color:#555; margin-top:-0.5rem; margin-bottom:1.5rem;'>"
-    "Notebooks com exercícios em branco para você praticar enquanto acompanha as aulas.</p>",
-    unsafe_allow_html=True,
-)
+st.markdown("""
+<div style="background: linear-gradient(135deg, #065f46 0%, #059669 60%, #0f766e 100%);
+            border-radius: 16px; padding: 2rem 2.5rem; color: white;
+            display: flex; align-items: center; gap: 2rem; margin-bottom: 1rem;">
+    <div style="font-size: 3rem; flex-shrink: 0;">📓</div>
+    <div style="flex: 1;">
+        <h2 style="margin: 0 0 0.4rem; font-size: 1.6rem; font-weight: 800;">Área do Aluno</h2>
+        <p style="margin: 0; opacity: 0.9; font-size: 0.95rem; max-width: 560px;">
+            Notebooks com exercícios para praticar enquanto acompanha as aulas.
+            Baixe, abra no Jupyter ou VS Code e complete os exercícios marcados com ✍️.
+        </p>
+        <p style="margin: 0.6rem 0 0; font-size: 0.82rem; opacity: 0.75;">
+            ✅ Aula 01 disponível &nbsp;·&nbsp; 🔒 Aulas 02–08 em breve
+        </p>
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
-_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-_notebooks_aluno = [
-    ("Aula 01 — Introdução ao ML", "aula_01/Aula_01_Introducao_ao_ML_(aluno).ipynb"),
-]
+if st.button("📓 Ir para a Área do Aluno →", use_container_width=False, type="primary", key="btn_aluno_main"):
+    st.switch_page(PAGE_ALUNO)
 
-_col_nb1, _col_nb2, _col_nb3, _col_nb4 = st.columns(4, gap="medium")
-_nb_cols = [_col_nb1, _col_nb2, _col_nb3, _col_nb4]
-
-for idx, (label, rel_path) in enumerate(_notebooks_aluno):
-    nb_file = os.path.join(_root, rel_path)
-    with _nb_cols[idx % 4]:
-        if os.path.exists(nb_file):
-            with open(nb_file, "rb") as _f:
-                st.download_button(
-                    label=f"⬇️ {label}",
-                    data=_f,
-                    file_name=os.path.basename(rel_path),
-                    mime="application/json",
-                    use_container_width=True,
-                    key=f"dl_nb_{idx}",
-                )
-        else:
-            st.markdown(
-                f"<div style='background:#f9fafb; border:1px dashed #ccc; border-radius:10px; "
-                f"padding:1rem; text-align:center; color:#aaa; font-size:0.85rem;'>"
-                f"🔒 {label}<br><small>Em breve</small></div>",
-                unsafe_allow_html=True,
-            )
-
-st.info("💡 Abra o notebook baixado no Jupyter Notebook ou VS Code e complete os exercícios marcados com ✍️.")
 st.markdown("---")
 
 
