@@ -64,9 +64,9 @@ Abra `http://localhost:8501` no navegador. O portal exibe todas as aulas e você
 
 ---
 
-## Área do Aluno
+## Caderno de Exercícios
 
-O portal tem uma seção dedicada ao aluno acessível pelo botão "Área do Aluno" no Portal ou diretamente em `pages/Aluno.py`. Lá você encontra notebooks com exercícios em branco para praticar enquanto acompanha as aulas — células marcadas com ✍️ para preencher, com dicas no código.
+O portal tem uma seção de prática acessível pelo botão "Caderno de Exercícios" no Portal ou diretamente em `pages/Aluno.py`. Lá você encontra notebooks com exercícios em branco para praticar enquanto acompanha as aulas — células marcadas com ✍️ para preencher, com dicas no código.
 
 | Aula | Notebook do aluno | Exercícios | Status |
 |------|-------------------|-----------|--------|
@@ -88,7 +88,7 @@ machine_learning/
 ├── README.md                     ← Este arquivo
 ├── pages/                        ← Multi-page Streamlit (cada arquivo = uma página)
 │   ├── Portal.py                 ← Portal com todas as aulas
-│   ├── Aluno.py                  ← Área do Aluno — download dos notebooks
+│   ├── Aluno.py                  ← Caderno de Exercícios — download dos notebooks
 │   ├── Aula_01.py ... Aula_08.py
 └── aula_NN/                      ← Uma pasta por aula
     ├── app_streamlit.py          ← Aplicação interativa da aula
