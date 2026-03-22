@@ -316,7 +316,7 @@ em1, em2, em3 = st.columns(3, gap="medium")
 with em1:
     st.markdown("""
     <div class="exp-card">
-        <div class="exp-badge-indigo">💼 SAVE Co. · Atual</div>
+        <div class="exp-badge-indigo">💼 SAVE Co. · Jaraguá do Sul/SC · Atual</div>
         <div class="exp-role">Analista de BI — SAVE Co.</div>
         <div class="exp-desc">
             Atualmente atua como Analista de Business Intelligence na SAVE Co., desenvolvendo
@@ -336,7 +336,7 @@ with em1:
 with em2:
     st.markdown("""
     <div class="exp-card">
-        <div class="exp-badge-green">🔍 PonceTech Consultoria</div>
+        <div class="exp-badge-green">🔍 PonceTech Consultoria · Fortaleza/CE</div>
         <div class="exp-role">Analista de BI Pleno — PonceTech Consultoria</div>
         <div class="exp-desc">
             Atuou como Analista de BI Pleno na PonceTech Consultoria, entregando soluções de
@@ -500,7 +500,7 @@ ed6, _, _ = st.columns([1, 1, 1], gap="medium")
 with ed6:
     st.markdown("""
     <div class="exp-card">
-        <div class="exp-badge-green">🎓 Faculdade Pitágoras</div>
+        <div class="exp-badge-green">🎓 Faculdade Pitágoras · Marabá/PA</div>
         <div class="exp-role">Professor de Nível A — Ensino Superior · Faculdade Pitágoras</div>
         <div class="exp-desc">
             Professor de Nível A no Ensino Superior da Faculdade Pitágoras, ministrando
