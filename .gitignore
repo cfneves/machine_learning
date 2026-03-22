@@ -1,0 +1,72 @@
+# =============================================================================
+# .gitignore — Machine Learning (UNISENAI)
+# Cláudio Ferreira Neves · Especialista em Ciência de Dados e IA
+# =============================================================================
+
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+
+# ── Ambientes virtuais ────────────────────────────────────────────────────────
+.env
+.venv
+env/
+venv/
+.python-version
+
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+
+# ── Outputs gerados automaticamente ──────────────────────────────────────────
+# As imagens são regeneradas ao rodar a aplicação — não precisam ser versionadas
+aula_*/outputs/
+_templates/outputs/
+
+
+# ── Streamlit ─────────────────────────────────────────────────────────────────
+# config.toml é versionado (configurações de tema e servidor)
+# secrets.toml NÃO é versionado (contém variáveis sensíveis)
+.streamlit/secrets.toml
+
+
+# ── Claude Code (editor local) ────────────────────────────────────────────────
+.claude/
+
+
+# ── Arquivos de trabalho interno (não fazem parte do curso) ──────────────────
+apresentacao.txt
+Contexto.txt
+enviar_para_o_git.txt
+execute.txt
+objetivo_curso.txt
+
+
+# ── IDEs ──────────────────────────────────────────────────────────────────────
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*.suo
+*.user
+
+
+# ── Sistema operacional ───────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+
+# ── Distribuição / build ──────────────────────────────────────────────────────
+dist/
+build/
+*.egg-info/
+*.egg
