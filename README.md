@@ -4,6 +4,8 @@
 
 **Cláudio Ferreira Neves  ·  Especialista em Ciência de Dados e IA**
 
+[![🚀 Acesse o Portal](https://img.shields.io/badge/🚀%20Acesse%20o%20Portal-machinelearning--cfn.streamlit.app-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://machinelearning-cfn.streamlit.app/)
+
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)](https://python.org)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.36%2B-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4%2B-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
